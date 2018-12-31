@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+
+<body>
+
+    <script>
+        var inputNum = prompt("입력한 숫자까지의 합이 출력됩니다. 입력하세요 ");
+        var num = Number(inputNum);
+        if(num === 0){
+            console.log("0을 입력해서 종료됩니다.");
+            exit();
+        }
+        var sum = 0;
+
+        
+        
+        for( var n  = 1; n <=num; n++){
+            sum = sum + n;
+            console.log(sum);
+        }
+        
+        document.write(num + " 까지의 합은 " + sum + " 입니다.");
+
+    
+    </script>
+
+</body>
+</html>
