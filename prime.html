@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <h1>소수 판별 프로그램</h1>
+    <body>
+        
+        <script>
+        
+        var inputNum = Number(prompt("2이상 숫자를 입력하세요."));        
+        var isPrime = true;
+
+        for(var n=2; n<inputNum; n++){
+            if(inputNum%n ===0){
+                isPrime=false;
+                console.log(n,isPrime);
+                break;
+            }
+        }
+            if(isPrime)
+            { document.write("입력하신 " + inputNum + " 는(은) 소수입니다."); }
+
+            else
+            { document.write("입력하신 " + inputNum + " 는(은) 소수가 아닙니다."); }     
+        
+        </script>
+    </body>
+</html>
