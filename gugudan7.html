@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>if문 과 for문 활용</h1>
+        
+        출력할 단: <input type="text" id = "num">
+        <button onclick="display()">확인</button>
+
+        <script>
+            function display() {
+            
+                var inputNum= document.getElementById('num').value;
+                var useNum=Number(inputNum);
+                
+                
+                if(useNum <2 || useNum > 9){
+                    document.write("2이상 9이하의 숫자를 입력해 주세요.");
+                 
+                }else{
+                    for(var n=1; n<=9; n++){
+                        var sum = useNum * n;
+                        document.write(useNum + " * " + n + " = " + sum +  "<br>");
+                    }
+                   
+                }
+
+            }
+            
+        
+        </script>
+    </body>
+</html>
