@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>구구단 배열로 표현하기</h2>
+        <h3>cosole 버전</h3>
+        <script>
+            var length =9;
+        
+            var result = [];
+
+            for(var i=2; i<=length; i++){
+                for(var n=1; n<=length; n++){
+                    var count=0;
+                    result[count] = i * n;
+                    console.log( i  + " X " + n + " = " + result[count]);
+                    count++;
+                }
+
+                console.log("<br>");
+            }
+        </script>
+    </body>
+</html>
+
