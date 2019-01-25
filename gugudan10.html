@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+         
+         
+          function calculate(num){
+             var results = [];
+           
+             for(var i = 1; i <= 9; i++)
+             {
+                results[i] = num * i;
+             }
+             return results;
+         }
+
+         function print(n, result){
+             document.write("<h2>"+ n +"단</h2>");
+            for(var i=1; i <= 9; i++){ 
+                var str = "";
+                str += n;
+                str += " X ";
+                str += i;
+                str += " = ";
+                str += result[i];
+                str += "<br>";
+                document.write(str);
+             }
+         }
+        
+         function main(){
+             
+             for(var i = 2; i <= 9;  i++)
+             {
+              var ret =calculate(i);
+              print(i, ret);
+             } 
+     
+         }
+
+         main();
+         
+
+        </script>
+    </body>
+</html>
