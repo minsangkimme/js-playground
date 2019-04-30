@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <h1>사용자 연산선택 계산기</h1>
+            <div>
+                첫번째수<input type = 'text' id = 'text1'> <br>
+                연산기호<input type = 'text' id = 'text2'> <br>
+                두번째수<input type = 'text' id = 'text3'> <br>
+                <button onclick = 'calc()'>확인</button>
+            </div> 
+            <div id = output> 결과 값 출력 대기중..</div>
+           
+           <script>
+               function calc(){
+                   var input1 = Number(document.getElementById('text1').value);
+                   var input2 = document.getElementById('text2').value;
+                   var input3 = Number(document.getElementById('text3').value);
+                   var out = document.getElementById('output');
+                   var str = "";
+                   
+
+                   if(input2 === '+') {
+                      str += "더하기 : " +  (input1 + input3) + "<br>";
+                     out.innerHTML = str;
+                   } else if(input2 === '-') {
+                    str += "빼기 : " +  (input1 - input3) + "<br>"; 
+                     out.innerHTML = str;
+                   }else if(input2 === '*') {
+                    str += "곱하기 : " +  (input1 * input3) + "<br>"; 
+                     out.innerHTML = str;
+                   }else if(input2 === '/') {
+                    str += "나누기 : " +  (input1 / input3) + "<br>"; 
+                     out.innerHTML = str;
+                   }else {
+                       str += "4칙 연산만 입력해주세요."
+                       out.innerHTML = str;
+                   }       
+               };
+           </script>
+        </body>
+    </head>
+</html>
