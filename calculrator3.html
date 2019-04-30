@@ -16,26 +16,28 @@
                    var input1 = Number(document.getElementById('text1').value);
                    var input2 = document.getElementById('text2').value;
                    var input3 = Number(document.getElementById('text3').value);
+                   
                    var out = document.getElementById('output');
                    var str = "";
                    
+                switch (input2) {
+                    case "+":
+                        str += "더하기 : " +  (input1 + input3) + "<br>";
+                        break;
+                    case "-":
+                        str += "빼기 : " +  (input1 - input3) + "<br>"; 
+                        break;
+                    case "*":
+                        str += "곱하기 : " +  (input1 * input3) + "<br>"; 
+                        break;
+                    case "/":
+                        str += "나누기 : " +  (input1 / input3) + "<br>"; 
+                        break;
+                     default:
+                        str += "잘못 입력하셨습니다.";   
 
-                   if(input2 === '+') {
-                      str += "더하기 : " +  (input1 + input3) + "<br>";
-                     out.innerHTML = str;
-                   } else if(input2 === '-') {
-                    str += "빼기 : " +  (input1 - input3) + "<br>"; 
-                     out.innerHTML = str;
-                   }else if(input2 === '*') {
-                    str += "곱하기 : " +  (input1 * input3) + "<br>"; 
-                     out.innerHTML = str;
-                   }else if(input2 === '/') {
-                    str += "나누기 : " +  (input1 / input3) + "<br>"; 
-                     out.innerHTML = str;
-                   }else {
-                       str += "4칙 연산만 입력해주세요."
-                       out.innerHTML = str;
-                   }       
+                }
+                    out.innerHTML = str;              
                };
            </script>
         </body>
