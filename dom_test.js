@@ -1,0 +1,1 @@
+document.write("dom_test 실행");
