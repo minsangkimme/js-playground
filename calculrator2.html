@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <h1>계산기2</h1>
+            <div>
+
+            첫번째 수: <input type ='text' id = 'text1'> <br>
+            두번째 수: <input type ='text' id = 'text2'> <br>
+            <button onclick = 'calc()'> 확인 </button>
+            </div>
+            <div id = 'output'>출력값 나오는곳</div>
+        
+           
+            <script>
+                function calc(){
+                        var n1 = Number(document.getElementById('text1').value);
+                        var n2 = Number(document.getElementById('text2').value);
+
+                        var str = "";
+            
+                        str += "더하기 : " + (n1 + n2) + "<br>"; 
+                        str += "빼기 : " + (n1 - n2) + "<br>";  
+                        str += "곱하기 : " + (n1 * n2) + "<br>"; 
+                        str += "나누기 : " + (n1 / n2) + "<br>";
+
+                        var out = document.getElementById('output');
+
+                        out.innerHTML = str;
+                       }
+                
+            </script>
+        </body>
+    </head>
+</html>
